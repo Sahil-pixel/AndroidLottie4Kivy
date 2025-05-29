@@ -1,0 +1,31 @@
+#:import os os
+<MainClass>
+	orientation:'vertical'
+	FloatLayout:
+		GLLottie:
+			id:img
+			size_hint:None,None
+			pos_hint:{'center_x':0.5,'center_y':0.5}
+			size:self.texture_size
+			file_path:os.path.join(os.getcwd(),"work4.json")
+
+			#texture: root._tex
+		
+		ToggleButton:
+			pos_hint:{'center_x':0.2,'center_y':0.1}
+			text:'P/S'
+			size_hint:None,None
+			size:dp(100),dp(80)
+			state:'normal'
+			on_state:  img.play() if self.state=='normal' else img.stop()
+		Button:
+			pos_hint:{'center_x':0.8,'center_y':0.1}
+			text:'Load another'
+			size_hint:None,None
+			size:dp(100),dp(80)
+			#state:'normal'
+			on_release:img.file_path=os.path.join(os.getcwd(),"work2.json")
+
+	
+	
+
