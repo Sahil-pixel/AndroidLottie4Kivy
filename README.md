@@ -1,5 +1,5 @@
 # Lottie file Rendering using OpenGL Texture rendering for Android
-### Description 
+### Description .
 GLLottie Class
 
 GLLottie is a Kivy widget that extends Image to display Lottie animations using OpenGL via the gleslottie library and java backend for Android. It manages loading, displaying, and controlling Lottie animation files seamlessly in your Kivy app.
